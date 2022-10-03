@@ -3,7 +3,18 @@
 body, html {
     margin: 0;
     width: 100%;
+    min-height: 100vh;
     padding: 0;
+    background-image: linear-gradient(black 50%, rgb(58, 1, 58));
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 255, 0);
+    font-family: 'Silkscreen', cursive;
+
+}
+
+a {
+    color: rgb(0, 255, 0);
 }
 
 .header {
@@ -49,11 +60,16 @@ nav {
     height: 3.5rem;
     top: 0;
     width: 100%;
-    background-color: lightgreen;}
+    background-color: rgb(58, 1, 58);
+}
 
 
 .logo {
     margin-left: 1rem;
+}
+
+.logo-small {
+    display: none;
 }
 
 .nav-bar {
@@ -76,17 +92,64 @@ nav {
 }
 
 .nav-bar li a:hover {
-    background-color: green;
-    color: white;
+    background-color: rgb(0, 255, 0);
+    color: black;
 }
 
 .active {
-    background-color: green;
-    color: white;
+    background-color: rgb(0, 255, 0);
+    color: black;
+}
+
+@media only screen and (max-width: 569px) {
+    .logo {
+        display: none;
+    }
+    .logo-small {
+        display: block;
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 464px) {
+    .nav-bar li {
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 332px) {
+    .nav-bar li a {
+       padding: 0.85rem; 
+    }
 }
 
 /* About Me Stuff */
 
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-container {
+    position: relative;
+    top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 654px) {
+    .about-me-section {
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+    .about-me-container {
+        top: 5rem;
+    }
+}
 
 /* Projects Stuff */
 
@@ -101,10 +164,14 @@ nav {
 
 .project {
     display: none;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 255, 0);
     border-radius: 5%;
     width: 80%;
-    height: 35rem;
+    height: 40rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .prev, .next {
@@ -112,7 +179,7 @@ nav {
     top: 50%;
     width: auto;
     padding: 16px;
-    color: black;
+    color: rgb(0, 255, 0);
     font-weight: bold;
     font-size: 2rem;
     transition: 0.6s ease;
@@ -125,7 +192,7 @@ nav {
 .arrow-container {
     position: absolute;
     width: 55%;
-    top: 50%;
+    top: 60%;
     display: none;
 }
 
@@ -143,7 +210,7 @@ nav {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(100, 100, 100, 0.8);
+    background-color: rgba(50, 50, 50, 0.8);
 }
 
 .fade {
@@ -166,11 +233,13 @@ nav {
 .project-link {
     font-size: 2rem;
     margin-left: 2rem;
+    z-index: 100;
 }
 
 .github-link {
     font-size: 1rem;
     margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 
 .project-picture {
@@ -185,6 +254,31 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 0rem 4rem;
+}
+
+@media only screen and (max-width: 812px) {
+    .project-picture {
+        width: 15rem;
+    }
+    .project {
+        width: 100%;
+    }
+    #projects-section {
+        width: 95%;
+    }
+    .arrow-container {
+        width: 94%;
+        display: block;
+    }
+}   
+
+@media only screen and (max-width: 374px) {
+    .project-link {
+        font-size: 1.25rem;
+    }
+    .project {
+        height: 45rem;
+    }
 }
 
 /* historical figure stuff */
@@ -205,32 +299,56 @@ nav {
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 25rem;
-    border: 1px solid grey;
+    height: 32.5rem;
+    border: 1px solid rgb(0, 255, 0);
     border-radius: 5%;
 }
 
 #result {
     line-height: 3rem;
+    padding: 0 1rem;
+    font-size: 0.75rem;
 }
 
 #button {
     margin-top: 1rem;
     display: flex;
-    border: 1px solid grey;
-    background-color: lightblue;
+    border: 1px solid rgb(0, 255, 0);
+    background-color: rgb(58, 1, 58);
     border-radius: 5%;
     height: 3rem;
     width: 10rem;
     text-align: center;
     align-items: center;
     justify-content: center;
-    box-shadow: 0rem 0.25rem 0rem 0rem grey;
+    box-shadow: 0rem 0.25rem 0rem 0rem silver;
 }
 
 #button:active {
     box-shadow: 0rem 0rem 0rem 0rem;
     margin-top: 1.25rem;
+}
+
+@media only screen and (max-width: 712px) {
+    .result-box {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    .title {
+        font-size: 1.15rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #result {
+        padding: 0 0.5rem;
+        line-height: 2rem;
+    }
+    .title {
+        font-size: 1rem;
+    }
 }
 
 /* Cat Quest Stuff */
@@ -245,6 +363,12 @@ nav {
     font-size: 2.75rem;
 }
 
+@media only screen and (max-width: 344px) {
+    .webpage-title {
+        font-size: 1.5rem;
+    }
+}
+
 /* djangoRestaurant stuff */
 
 
@@ -252,4 +376,36 @@ nav {
     padding: 0 4rem;
 }
 
+@media only screen and (max-width:816px) {
+    .image-large {
+        width: 30rem;
+    }
+}
+
+@media only screen and (max-width: 496px) {
+    .image-medium {
+        width: 100%;
+    }
+    .image-large {
+        width: 100%;
+    }
+
+    .explanation-container p{
+        padding: 0 2rem;
+    }
+}
 /* Contacts stuff */
+
+.contact-group {
+    position: relative;
+    top: 15rem;
+}
+
+@media only screen and (max-width: 594px) {
+    .contact-group h1 {
+        font-size: 1rem;
+    }
+    .contact-group {
+        top: 5rem;
+    }
+}
