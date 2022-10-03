@@ -1,3 +1,7 @@
 [submodule "responsive/SAHA"] 
   path = responsive/SAHA
   url = https://github.com/dirtOval/SAHA
+
+[submodule "responsive/dogExtractorInc"]
+  path = responsive/dogExtractorInc
+  url = https://github.com/dirtOval/dogExtractorInc
