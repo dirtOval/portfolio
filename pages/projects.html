@@ -3,10 +3,11 @@
     <head>
         <title>Dirt Oval</title>
         <link rel="stylesheet" href="../css/styles.css"/>
+        <script src="../scripts/projects.js" defer></script>
     </head>
     <body>
         <nav>
-            <p class="logo">DIRT OVAL</p>
+            <p class="logo">DEIRDRE LOYALL</p>
 
             <ul class="nav-bar">
                 <li><a href='index.html'>About Me</a></li>
@@ -18,8 +19,32 @@
         <h1 class="header">Projects:</h1>
 
         <div id="projects-section">
-            <div class="project">
-                <img class="project-picture" src="../images/hfg-rough.png"/>
+            <div class="project fade">
+                <div class="image-container">
+                    <img class="project-picture" src="../images/projectPreviews/boatworksSMS-rough.png"/>
+                </div>
+                <div class="project-text">
+                    <a class="project-link" href="boatworksSMS.html">Boatworks SMS</a>
+                    <br>
+                    <a class="github-link" href="https://github.com/dirtOval/boatworksSMS_3.8" target="_blank">See Code On Github</a>
+                    <p>Simple application of Twilio's SMS API plugged into a database of phone numbers, allowing the user to text hundreds of people at once. Made for Brooklyn Boatworks.</p>
+                </div>
+            </div>
+
+            <div class="project fade">
+                <div class="image-container">
+                    <img class="project-picture" src="../images/projectPreviews/responsive-rough.png"/>
+                </div>
+                <div class="project-text">
+                    <a class="project-link" href="responsiveWebpages.html">Responsive Webpages</a>
+                    <p>A couple responsive webpages I made for Codecademy projects.</p>
+                </div>
+            </div>
+
+            <div class="project fade">
+                <div class="image-container">
+                    <img class="project-picture" src="../images/projectPreviews/hfg-rough.png"/>
+                </div>
                 <div class="project-text">
                     <a class="project-link" href="historicalFigureGenerator.html">Historical Figure Generator</a>
                     <br>
@@ -28,28 +53,22 @@
                 </div>
             </div>
 
-            <div class="project">
-                <img class="project-picture" src="../images/hfg-rough.png"/>
+            <div class="project fade">
+                <div class="image-container">
+                    <img class="project-picture" src="../images/projectPreviews/djangoRestaurant-rough.png"/>
+                </div>
                 <div class="project-text">
-                    <a class="project-link" href="historicalFigureGenerator.html">Historical Figure Generator</a>
+                    <a class="project-link" href="djangoRestaurant.html">Django Restaurant</a>
                     <br>
-                    <a class="github-link" href="https://github.com/dirtOval/historicalFigureGenerator" target="_blank">See Code On Github</a>
-                    <p>A silly text generator I made for a Codecademy project. It pulls from several word banks to create a brief biography of a fictional person.</p>
+                    <a class="github-link" href="https://github.com/dirtOval/djangoRestaurant" target="_blank">See Code On Github</a>
+                    <p>My first Django project, a POS app that tracks sales and inventory for a fictional restaurant. Codecademy project.</p>
                 </div>
             </div>
 
-            <div class="project">
-                <img class="project-picture" src="../images/hfg-rough.png"/>
-                <div class="project-text">
-                    <a class="project-link" href="historicalFigureGenerator.html">Historical Figure Generator</a>
-                    <br>
-                    <a class="github-link" href="https://github.com/dirtOval/historicalFigureGenerator" target="_blank">See Code On Github</a>
-                    <p>A silly text generator I made for a Codecademy project. It pulls from several word banks to create a brief biography of a fictional person.</p>
+            <div class="project fade">
+                <div class="image-container">
+                    <img class="project-picture" src="../images/projectPreviews/cat-quest-rough.png"/>
                 </div>
-            </div>
-
-            <div class="project">
-                <img class="project-picture" src="../images/cat-quest-rough.png"/>
                 <div class="project-text">
                     <a class="project-link" href="catQuest.html">Cat Quest</a>
                     <br>
@@ -57,7 +76,15 @@
                     <p>My first project ever. A simple hack n' slash RPG where you play as a cat in search of dinner.</p>
                 </div>
             </div>
-
+            
+            <div class="arrow-container">
+                <div class="arrows">
+                    <a class="prev" onclick="plusSlides(-1)">←</a>
+                    <a class="next" onclick="plusSlides(1)">→</a>
+                </div>
+            </div>
         </div>
+        
+        
     </body>
 </html>

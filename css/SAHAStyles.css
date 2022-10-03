@@ -1,0 +1,278 @@
+/* Universal Stuff */
+
+body {
+    background: linear-gradient(black 40%, grey 80%, white);
+    background-repeat: no-repeat;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.header {
+    color: white;
+    font-size: 3rem;
+}
+
+.red {
+    color: rgb(190, 0, 0);
+}
+
+.button {
+    margin: 1rem 0rem;
+}
+
+/* Nav Bar Stuff */
+
+
+.menu {
+    background-color: rgba(40, 40, 40, 0.5);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-list {
+    justify-self: end;
+}
+
+.nav-list li {
+    display: inline;
+    float: right;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem;
+}
+
+.dropbtn {
+    background-color:rgba(40, 40, 40, 0.45);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-right: 1rem;
+}
+
+.nav-dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(40, 40, 40, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding :12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color:rgba(40, 40, 40, 0.55);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-dropdown:hover .dropbtn {
+    background-color:rgba(40, 40, 40, 0.55);
+}
+
+@media only screen and (max-width: 575px) {
+    /* .nav-list li a {
+        font-size: .70rem;
+    } */
+    .nav-list {
+        display: none;
+    }
+    .nav-dropdown {
+        display: inline-block;
+    }
+}
+
+.nav-list li a:hover {
+    background-color: rgba(40, 40, 40, 0.55);
+}
+
+.logo {
+    display: inline;
+    justify-self: start;
+    line-height: 0;
+    margin-left: 1rem;
+    color: white;
+}
+
+/* Banner Stuff */
+
+.banner-bg {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    background-image: url(../images/SAHA/planet-earth.jpg);
+    height: 35.5rem;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.25rem;
+    color: white;
+    text-shadow: 0.3rem 0.1rem black;
+    background-color: rgba(40, 40, 40, 0.5);
+    margin: 0rem 3rem;
+}
+
+.title-container {
+    display: flex;
+    height: 35.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slogan {
+    margin: 4rem 5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+@media only screen and (max-width: 672px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Activities Stuff */
+
+#activities-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-gallery {
+    display: flex;
+    width: 95%;
+    height: 45rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.activity {
+    width: 20rem;
+    height: auto;
+}
+
+.activity .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1043px) {
+    .activity-gallery {
+        height: 53rem;
+    }
+}
+
+@media only screen and (max-width: 706px) {
+    .activity-gallery {
+        height: 195rem;
+        justify-content: center;
+    }
+
+    .activity {
+        width: 40rem;
+    }
+}
+
+/* testimonials stuff */
+
+#testimonials-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-gallery {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    padding: 1rem 1rem;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.testimonial .content p {
+    font-size: 2rem;
+    color: white;
+}
+
+@media only screen and (max-width: 912px) {
+    .testimonials-gallery {
+        justify-content: center;
+    }
+}
+
+/* Form stuff */
+
+.form-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#form-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    border: 1px solid black;
+    width: 45%;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+
+}
